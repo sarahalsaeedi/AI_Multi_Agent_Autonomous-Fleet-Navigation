@@ -44,6 +44,27 @@ pip install -r requirements.txt
 python -m pip install -r requirements.txt
 ```
 
+## Reinforcement Learning:
+Reinforcement Learning (RL) has shown promising results in the learning of complex decision-making tasks ranging from strategic games to challenging robotics tasks. Furthermore, autonomous driving is a promising application for RL due to its dense reward structure and short-term horizons.
+
+In this project, we have used two reinforcement learning algorithms which are Q-Learning, and Deep Q-Learning and each agent is implemented with different parameter inputs. 
+
+## Q-Learning Agent
+This agent will currently controls the steering control, which moves the steer scale levels from right to left and 0 steer is the forward-moving, currently works with more than **10 steering levels**, and it has an error function that adjusts the accuracy of the steering to give the correct angle values.
+
+In Q-Learning agent we have achieved the following tasks (**Move Straight without lane  invasion, Avoid obstacles, Turn Left & Right, Navigate from A-B, Traffic Rules, Avoid Crashing with Dynamic Objects, Navigation System, Adjusting Steers***)
+
+#### Run Q-Learning
+Navigate to the project folder then from /code run the following command: 
+
+```bash
+#Windows
+py -3.7 run_QLearning_Agent.py
+#Linux
+python run_QLearning_Agent.py
+```
+
+
 ### Running CARLA
 
 ```bash
@@ -52,3 +73,20 @@ Carla\CarlaUE4.exe -quality-level=Low/high
 #Lunix
 Carla\CarlaUE4.sh -quality-level=Low/high
 ```
+
+
+#### Demo Video for Q-Learning
+[![Watch the video](/media/images/qn/Q-learning.png)](/media/videos/QLearning%20A-B%20Final%20Presnts.mp4)
+
+#### Training Results for Q-Learning
+After training the Q-Learning agent for about 350 episodes we have got the following results: (Note: QN and DQN has different reward values): 
+
+| Total Cost | Total Steps | Total Agnet Reached Presnted by (0 or 1) |
+|:---:|:---:|:---:|
+| ![total_cost](/media/images/qn/total_cost.png?raw=true "total_cost")  | ![total_steps](/media/images/qn/total_steps.png?raw=true "Total Stpes") | ![total_reached_distination](/media/images/qn/total_reached_distination.png?raw=true "total_reached_distination") |
+
+| Total Lane Crossed | Total Wrong Turns |
+|:---:|:---:|
+|   ![total_lane_crossed](/media/images/qn/total_lane_crossed.png?raw=true "total_lane_crossed")  |   ![total_turns](/media/images/qn/total_turns.png?raw=true "total_turns")   |
+
+

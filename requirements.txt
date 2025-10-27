@@ -1,0 +1,15 @@
+opencv-python
+pandas
+networkx
+numpy; python_version < '3.0'
+numpy==1.18.4; python_version >= '3.0'
+distro
+matplotlib
+cv2
+opencv
+tensorflow
+pygame
+
+
+#Please Use to install 
+#python -m pip install -r requirements.txt
